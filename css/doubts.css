@@ -1,0 +1,97 @@
+.reply h3{
+    margin-top: 5rem;
+}
+.container h2{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.comment-box, .post-comment .list{
+background-color:var(--color-bg2);
+border-radius: 6px;
+box-shadow: 0 2px 2px var(--color-bg1);
+}
+.comment-section{
+    width: 650px;
+    height: auto;
+    margin: 3rem;
+}
+.post-comment .list {
+
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.post-comment .list .user {
+    display: flex;
+    padding: 6px;
+    overflow: hidden;
+}
+.post-comment .list .user img{
+   height: 38px;
+    width: 38px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.comment-section .name{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.post-comment .list .day{
+    font-size: 10px;
+}
+.post-comment .comment-post{
+    padding: 0 0 15px 58px ;
+}
+
+/**********comment box******************/
+.comment-box{
+    padding: 10px;
+    overflow: hidden;
+}
+.comment-box .user{
+    display: flex;
+    width: 50%;
+}
+.comment-box .image img{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.comment-box textarea{
+    background:rgb(188, 229, 241);
+    width: -webkit-fill-available;
+    height: 152px;
+    margin: 10px 0;
+    padding: 10px;
+    resize: inherit;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px black;
+}
+.comment-box textarea:focus-visible{
+    box-shadow:var(--color-bg2);
+    outline: none;
+}
+.comment-box .comment-submit{
+    float: right;
+    padding: 6px 10px;
+    border: none;
+    background-color: rgb(62, 158, 192);
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.contact__form .btn{
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.comment-box .comment-submit:hover{
+    background:rgb(111, 217, 255);
+}
+.comment-box{
+    margin-bottom: 4rem;
+}
+@media screen and(max-width: 650px)
+{
+    .comment-section{width:100%};
+}

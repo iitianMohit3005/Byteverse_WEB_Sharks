@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        Build a Survey Form using HTML and CSS
+    </title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        .ab{
+            margin-left: 20px;
+        }
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        h1{
+            color:#fff
+        }
+        body {
+            background-color: #1f2641;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+            
+        }
+
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #1f2641;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        /* Styling Button */
+        button {
+            color:#fff;
+            background-color: #1f2641;
+            border: 1px solid #1f2641;
+            border-radius:2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        button:hover{
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Please enter your details</h1>
+
+    <!-- Create Form -->
+    <form id="form">
+
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                <h2>Name of institute</h2>
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="institute"
+                   placeholder="Enter the name of your institute" />
+        </div>
+
+        <div class="form-control">
+            <label for="branch" id="label-branch">
+                <h2>Branch</h2>
+            </label>
+
+            <!-- Dropdown options -->
+            <select name="branch" id="branch">
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EE">EE</option>
+                <option value="ME">ME</option>
+                <option value="CE">CE</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="role" id="label-role">
+                <h2>Year of study</h2>
+            </label>
+
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                    
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>
+                Academic level
+            </label>
+
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="recommed">Good</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="recommed">Average</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="recommed">Poor</input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>Interest and the level of knowledge
+                <small>(Check all the interests that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <div class="form-control ab">
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp">Web development</input></label>
+                       
+                        <!-- Input Type Radio Button -->
+                        <div class="ab">
+                        <label for="recomme-1">
+                            <input type="radio"
+                                   id="recomme-1"
+                                   name="recomme1">Beginner</input>
+                        </label>
+                        <label for="recomme-2">
+                            <input type="radio"
+                                   id="recomme-2"
+                                   name="recomme1">Intermediate</input>
+                        </label>
+                        <label for="recomme-3">
+                            <input type="radio"
+                                   id="recomme-3"
+                                   name="recomme1">Expert</input>
+                        </label>
+                    </div></div>
+                    <div class="ab">
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">App development</input></label>
+                       <div class="form-control ab">
+                        <!-- Input Type Radio Button -->
+                        <label for="recomme-4">
+                            <input type="radio"
+                                   id="recomme-4"
+                                   name="recomme2">Beginner</input>
+                        </label>
+                        <label for="recomme-5">
+                            <input type="radio"
+                                   id="recomme-5"
+                                   name="recomme2">Intermediate</input>
+                        </label>
+                        <label for="recomme-6">
+                            <input type="radio"
+                                   id="recomme-6"
+                                   name="recomme2">Expert</input>
+                        </label>
+                    </div></div>
+                    <div class="ab">
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">Placement oriented</input></label>
+                       <div class="form-control ab">
+                        <!-- Input Type Radio Button -->
+                        <label for="recomme-7">
+                            <input type="radio"
+                                   id="recomme-7"
+                                   name="recomme3">Beginner</input>
+                        </label>
+                        <label for="recomme-8">
+                            <input type="radio"
+                                   id="recomme-8"
+                                   name="recomme3">Intermediate</input>
+                        </label>
+                        <label for="recomme-9">
+                            <input type="radio"
+                                   id="recomme-9"
+                                   name="recomme3">Expert</input>
+                        </label>
+                    </div></div>
+                    <div class="ab">
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">ML/AI</input></label>
+                       <div class="ab">
+                        <!-- Input Type Radio Button -->
+                        <label for="recomme-10">
+                            <input type="radio"
+                                   id="recomme-10"
+                                   name="recomme4">Beginner</input>
+                        </label>
+                        <label for="recomme-11">
+                            <input type="radio"
+                                   id="recomme-11"
+                                   name="recomme4">Intermediate</input>
+                        </label>
+                        <label for="recomme-12">
+                            <input type="radio"
+                                   id="recomme-12"
+                                   name="recomme4">Expert</input>
+                        </label>
+                    </div></div>
+                    <div class="ab">
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">AR/VR</input></label>
+                       <div class="form-control ab">
+                        <!-- Input Type Radio Button -->
+                        <label for="recomme-13">
+                            <input type="radio"
+                                   id="recomme-13"
+                                   name="recomme5">Beginner</input>
+                        </label>
+                        <label for="recomme-14">
+                            <input type="radio"
+                                   id="recomme-14"
+                                   name="recomme5">Intermediate</input>
+                        </label>
+                        <label for="recomme-15">
+                            <input type="radio"
+                                   id="recomme-15"
+                                   name="recomme5">Expert</input>
+                        </label>
+                    </div></div>
+                    <div class=ab>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">Blockchain</input></label>
+                       <div class="form-control ab">
+                        <!-- Input Type Radio Button -->
+                        <label for="recomme-16">
+                            <input type="radio"
+                                   id="recomme-16"
+                                   name="recomme6">Beginner</input>
+                        </label>
+                        <label for="recomme-17">
+                            <input type="radio"
+                                   id="recomme-17"
+                                   name="recomme6">Intermediate</input>
+                        </label>
+                        <label for="recomme-18">
+                            <input type="radio"
+                                   id="recomme-18"
+                                   name="recomme6">Expert</input>
+                        </label>
+                    </div></div>
+                    <div class="ab">
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">UI/UX design</input></label>
+                       <div class="form-control ab">
+                        <!-- Input Type Radio Button -->
+                        <label for="recomme-19">
+                            <input type="radio"
+                                   id="recomme-19"
+                                   name="recomme7">Beginner</input>
+                        </label>
+                        <label for="recomme-20">
+                            <input type="radio"
+                                   id="recomme-20"
+                                   name="recomme7">Intermediate</input>
+                        </label>
+                        <label for="recomme-21">
+                            <input type="radio"
+                                   id="recomme-21"
+                                   name="recomme7">Expert</input>
+                        </label>
+                    </div></div>
+        </div>
+
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit" >
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
